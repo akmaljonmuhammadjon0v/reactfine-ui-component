@@ -1,0 +1,6 @@
+# .npmignore
+src/main.tsx
+src/App.tsx
+index.html
+vite.config.ts
+tsconfig.node.json
