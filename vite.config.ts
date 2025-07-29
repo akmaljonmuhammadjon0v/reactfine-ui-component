@@ -1,28 +1,26 @@
-import tailwindcss from '@tailwindcss/vite';
 import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
+import react from '@vitejs/plugin-react-swc';
 import dts from 'vite-plugin-dts';
 import path from 'path';
 
 export default defineConfig({
 	build: {
 		lib: {
-			entry: 'src/index.ts',
+			entry: path.resolve(__dirname, 'index.ts'),
 			name: 'reactfine-ui',
-			fileName: 'index',
-			formats: ['es', 'cjs'],
+			fileName: format => `index.${format}.js`,
 		},
 		rollupOptions: {
 			external: ['react', 'react-dom'],
+			output: {
+				globals: {
+					react: 'React',
+					'react-dom': 'ReactDOM',
+				},
+			},
 		},
 		sourcemap: true,
 		emptyOutDir: true,
 	},
-
-	resolve: {
-		alias: {
-			'@': path.resolve(__dirname, 'src'),
-		},
-	},
-	plugins: [react(), dts(), tailwindcss()],
+	plugins: [react(), dts()],
 });
