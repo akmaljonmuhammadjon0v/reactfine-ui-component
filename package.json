@@ -3,7 +3,7 @@
 	"description": "My Personal react ui library",
 	"main": "dist/index.js",
 	"module": "dist/index.esm.js",
-	"types": "dist/index.d.ts",
+	"types": "dist/types.d.ts",
 	"files": [
 		"dist",
 		"README.md",
