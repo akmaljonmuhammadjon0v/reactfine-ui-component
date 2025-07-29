@@ -5,7 +5,6 @@ import dts from 'vite-plugin-dts';
 import path from 'path';
 
 export default defineConfig({
-	plugins: [react(), dts(), tailwindcss()],
 	build: {
 		lib: {
 			entry: 'src/index.ts',
@@ -16,10 +15,14 @@ export default defineConfig({
 		rollupOptions: {
 			external: ['react', 'react-dom'],
 		},
+		sourcemap: true,
+		emptyOutDir: true,
 	},
+
 	resolve: {
 		alias: {
 			'@': path.resolve(__dirname, 'src'),
 		},
 	},
+	plugins: [react(), dts(), tailwindcss()],
 });
