@@ -1,5 +1,5 @@
 import React from 'react';
-import { cn } from '@/lib/utils';
+import { cn } from '../../lib/utils';
 import { Loader } from 'lucide-react';
 import { ButtonProps } from '../../types';
 const Button: React.FC<ButtonProps> = ({

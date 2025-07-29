@@ -1,5 +1,5 @@
 import type React from 'react';
-import { cn } from '@/lib/utils';
+import { cn } from '../../lib/utils';
 
 // Card asosiy komponenti
 export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {

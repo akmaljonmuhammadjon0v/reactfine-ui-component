@@ -1,5 +1,5 @@
 import React from 'react';
-import { cn } from '@/lib/utils'; // agar util funksiyalaring bo‘lsa
+import { cn } from '../../lib/utils'; // agar util funksiyalaring bo‘lsa
 import { X } from 'lucide-react';
 
 interface ModalProps {
