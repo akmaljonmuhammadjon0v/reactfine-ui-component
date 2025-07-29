@@ -15,6 +15,7 @@
 		"moduleDetection": "force",
 		"noEmit": true,
 		"declaration": true,
+		"declarationDir": "types",
 		"jsx": "react-jsx",
 
 		/* Linting */
