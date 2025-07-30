@@ -1,5 +1,6 @@
 import { MailIcon, RocketIcon, Sun } from 'lucide-react';
-import { Badge, Button, Card, Input, Modal } from './components';
+import { Badge, Card, Input, Modal } from './components';
+
 import {
 	CardContent,
 	CardDescription,
@@ -15,6 +16,7 @@ import {
 	ModalFooter,
 	ModalTitle,
 } from './components/modal/modal';
+import { Button } from 'reactfine-ui';
 
 function App() {
 	const [open, setOpen] = useState(false);
@@ -97,6 +99,9 @@ function App() {
 						</Button>
 					</ModalFooter>
 				</Modal>
+			</div>
+			<div>
+				<Button variant='primary'>Button</Button>
 			</div>
 		</div>
 	);

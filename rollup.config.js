@@ -30,27 +30,27 @@ export default [
 			},
 		],
 		plugins: [
-		alias({
-		entries: [
-		  { find: 'components', replacement: path.resolve(__dirname, 'src/components') },
-		  { find: 'lib', replacement: path.resolve(__dirname, 'src/lib') },
-		  { find: '@', replacement: path.resolve(__dirname, 'src') },
-		],
-	  }),
+		  alias({
+		    entries: [
+		      { find: 'components', replacement: path.resolve(__dirname, 'src/components') },
+		      { find: 'lib', replacement: path.resolve(__dirname, 'src/lib') },
+		      { find: '@', replacement: path.resolve(__dirname, 'src') },
+		    ],
+	    }),
 
 			peerDepsExternal(),
 			resolve(),
 			postcss({
-				extract: true,
-				minimize: true,
-			}),
+        config: {
+          path: './postcss.config.js',
+        },
+        extensions: ['.css'],
+        minimize: true,
+        inject: {
+          insertAt: 'top',
+        },
+      }),
 			commonjs(),
-			postcss({ // <-- CSS plugin bu yerda
-		extensions: ['.css'],
-		extract: true,
-		minimize: true,
-		sourceMap: true,
-	  }),
 			json(), // ✅ JSON plugin qo‘shildi asosiy qismga
 			esbuild({
 		include: /\.[jt]sx?$/, // .ts, .tsx, .js, .jsx fayllarni qo‘llab-quvvatlaydi
