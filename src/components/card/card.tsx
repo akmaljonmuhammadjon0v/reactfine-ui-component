@@ -8,11 +8,13 @@ export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
 	border?: boolean;
 	hoverable?: boolean;
 	rounded?: 'sm' | 'md' | 'lg' | 'xl';
+	width?: 'sm' | 'md' | 'lg' | 'xl';
 }
 
 export const Card: React.FC<CardProps> = ({
 	children,
 	shadow = 'sm',
+	width = 'md',
 	border = true,
 	hoverable = false,
 	rounded = 'md',
@@ -32,15 +34,22 @@ export const Card: React.FC<CardProps> = ({
 		lg: 'rounded-lg',
 		xl: 'rounded-xl',
 	};
+	const widthMap = {
+		sm: 'max-w-sm',
+		md: 'max-w-md',
+		lg: 'max-w-lg',
+		xl: 'max-w-xl',
+	};
 
 	return (
 		<div
 			className={cn(
-				'bg-white transition-shadow duration-200 max-w-md', // ← Faqat max-w-md qo'shildi
+				'bg-white transition-shadow duration-200', // ← Faqat max-w-md qo'shildi
 				shadowMap[shadow],
 				border && 'border border-gray-200',
 				hoverable && 'hover:shadow-lg cursor-pointer',
 				roundedMap[rounded],
+				widthMap[width],
 				className
 			)}
 			{...restProps}
