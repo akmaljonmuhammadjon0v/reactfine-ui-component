@@ -1,8 +1,17 @@
-export { default as Modal } from './modal';
-export {
+import {
+	Modal,
+	ModalContent,
 	ModalTitle,
 	ModalDescription,
-	ModalImage,
-	ModalContent,
 	ModalFooter,
+	ModalImage,
 } from './modal';
+
+export {
+	Modal,
+	ModalContent,
+	ModalTitle,
+	ModalDescription,
+	ModalFooter,
+	ModalImage,
+};

@@ -44,7 +44,7 @@ const Modal: React.FC<ModalProps> = ({
 	);
 };
 
-export default Modal;
+export { Modal };
 
 export function ModalTitle({ children }: { children: React.ReactNode }) {
 	return <h2 className='text-xl font-semibold mb-2'>{children}</h2>;
