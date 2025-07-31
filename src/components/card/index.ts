@@ -1,3 +1,8 @@
-import { Card } from './card';
-
-export default Card;
+export {
+	Card,
+	CardHeader,
+	CardTitle,
+	CardContent,
+	CardDescription,
+	CardFooter,
+} from './card';
