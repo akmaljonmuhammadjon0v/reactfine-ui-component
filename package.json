@@ -8,7 +8,8 @@
 		".": {
 			"import": "./dist/index.esm.js",
 			"require": "./dist/index.js",
-			"types": "./dist/types.d.ts"
+			"types": "./dist/types.d.ts",
+			"style": "./dist/index.css"
 		}
 	},
 	"style": "dist/index.css",
