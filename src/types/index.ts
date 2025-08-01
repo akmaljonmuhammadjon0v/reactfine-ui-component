@@ -4,6 +4,6 @@ export interface ButtonProps
 	variant?: 'primary' | 'secondary' | 'danger' | 'success' | 'outline' | 'dark';
 	size?: 'small' | 'default' | 'large' | 'icon';
 	focus?: 'primary' | 'secondary' | 'danger' | 'success' | 'outline' | 'dark';
-	rounded?: 'sm' | 'md' | 'lg' | 'full';
+	rounded?: 'sm' | 'default' | 'lg' | 'full';
 	loading?: boolean;
 }

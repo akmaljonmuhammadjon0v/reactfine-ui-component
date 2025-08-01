@@ -1,7 +1,9 @@
 import React from 'react';
-import { cn } from '../../lib/utils';
 import { Loader } from 'lucide-react';
-import { ButtonProps } from '../../types';
+import { cn } from '@/lib/utils';
+import { ButtonProps } from '@/types';
+
+// Button component with TypeScript
 const Button: React.FC<ButtonProps> = ({
 	children,
 	variant = 'primary',
@@ -10,9 +12,9 @@ const Button: React.FC<ButtonProps> = ({
 	focus,
 	className,
 	disabled,
-	rounded = 'md',
+	rounded = 'default',
 	...restProps
-}) => {
+}: ButtonProps) => {
 	const variantClasses = {
 		primary: 'bg-blue-600 text-white hover:bg-blue-700',
 		secondary: 'bg-gray-400 text-white hover:bg-gray-400/80',
@@ -31,7 +33,7 @@ const Button: React.FC<ButtonProps> = ({
 
 	const roundedClasses = {
 		sm: 'rounded-sm',
-		md: 'rounded-md',
+		default: 'rounded-md',
 		lg: 'rounded-lg',
 		full: 'rounded-full',
 	};
@@ -50,13 +52,19 @@ const Button: React.FC<ButtonProps> = ({
 		dark: 'focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black',
 	};
 
+	// Base classes
+	const baseClasses =
+		'inline-flex gap-2 items-center cursor-pointer justify-center font-medium transition-colors disabled:opacity-50 disabled:pointer-events-none';
+
 	const buttonClasses = cn(
-		`inline-flex gap-2 items-center cursor-pointer justify-center font-medium rounded-md transition-colors disabled:opacity-50 disabled:pointer-events-none`,
-		variantClasses[variant],
-		focusClasses[focus || variant],
+		baseClasses,
+		// Default styles (can be overridden)
+		!className?.includes('bg-') && variantClasses[variant],
+		!className?.includes('rounded') && roundedClasses[rounded],
 		sizeClasses[size],
-		roundedClasses[rounded],
+		focusClasses[focus || variant],
 		loading && 'opacity-70 pointer-events-none',
+		// Custom className at the end for override
 		className
 	);
 
@@ -72,5 +80,4 @@ const Button: React.FC<ButtonProps> = ({
 		</button>
 	);
 };
-
 export default Button;
