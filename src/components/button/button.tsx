@@ -1,7 +1,7 @@
 import React from 'react';
 import { Loader } from 'lucide-react';
-
-import { ButtonProps } from '@/types';
+import { cn } from '../../lib/utils';
+import { ButtonProps } from '../../types';
 
 // Button component with TypeScript
 const Button: React.FC<ButtonProps> = ({
@@ -55,16 +55,12 @@ const Button: React.FC<ButtonProps> = ({
 	// Base classes
 	const baseClasses =
 		'inline-flex gap-2 items-center cursor-pointer justify-center font-medium transition-colors disabled:opacity-50 disabled:pointer-events-none';
-	// cn
-	const cn = (...classes: (string | undefined | false | null)[]) => {
-		return classes.filter(Boolean).join(' ');
-	};
 
 	const buttonClasses = cn(
 		baseClasses,
 		// Default styles (can be overridden)
-		!className?.includes('bg-') && variantClasses[variant],
-		!className?.includes('rounded') && roundedClasses[rounded],
+		variantClasses[variant],
+		roundedClasses[rounded],
 		sizeClasses[size],
 		focusClasses[focus || variant],
 		loading && 'opacity-70 pointer-events-none',
