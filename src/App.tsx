@@ -101,7 +101,9 @@ function App() {
 				</Modal>
 			</div>
 			<div>
-				<Button variant='primary'>Button</Button>
+				<Button variant='primary' className='bg-red-500'>
+					Button
+				</Button>
 			</div>
 		</div>
 	);

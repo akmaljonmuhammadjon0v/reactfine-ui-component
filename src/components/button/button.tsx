@@ -1,6 +1,6 @@
 import React from 'react';
 import { Loader } from 'lucide-react';
-import { cn } from '@/lib/utils';
+
 import { ButtonProps } from '@/types';
 
 // Button component with TypeScript
@@ -55,6 +55,10 @@ const Button: React.FC<ButtonProps> = ({
 	// Base classes
 	const baseClasses =
 		'inline-flex gap-2 items-center cursor-pointer justify-center font-medium transition-colors disabled:opacity-50 disabled:pointer-events-none';
+	// cn
+	const cn = (...classes: (string | undefined | false | null)[]) => {
+		return classes.filter(Boolean).join(' ');
+	};
 
 	const buttonClasses = cn(
 		baseClasses,
