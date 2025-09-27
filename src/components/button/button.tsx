@@ -58,14 +58,14 @@ const Button: React.FC<ButtonProps> = ({
 
 	const buttonClasses = cn(
 		baseClasses,
-		// Default styles (can be overridden)
-		variantClasses[variant],
-		roundedClasses[rounded],
+		// faqat bg yo‘q bo‘lsa default variant qo‘shiladi
+		className?.includes('bg-') && variantClasses[variant],
+		// faqat rounded yo‘q bo‘lsa default qo‘shiladi
+		className?.includes('rounded') && roundedClasses[rounded],
 		sizeClasses[size],
 		focusClasses[focus || variant],
 		loading && 'opacity-70 pointer-events-none',
-		// Custom className at the end for override
-		className
+		className // oxirida foydalanuvchi yozgani ustun bo‘ladi
 	);
 
 	return (

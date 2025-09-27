@@ -9,7 +9,7 @@ interface ModalProps {
 	className?: string;
 }
 
-const Modal: React.FC<ModalProps> = ({
+export const Modal: React.FC<ModalProps> = ({
 	isOpen,
 	onClose,
 	children,
@@ -44,11 +44,9 @@ const Modal: React.FC<ModalProps> = ({
 	);
 };
 
-export { Modal };
-
-export function ModalTitle({ children }: { children: React.ReactNode }) {
+export const ModalTitle = ({ children }: { children: React.ReactNode }) => {
 	return <h2 className='text-xl font-semibold mb-2'>{children}</h2>;
-}
+};
 
 export const ModalDescription: React.FC<
 	React.HTMLAttributes<HTMLParagraphElement>
@@ -63,9 +61,9 @@ export const ModalDescription: React.FC<
 	);
 };
 
-export function ModalImage({ src, alt }: { src: string; alt?: string }) {
+export const ModalImage = ({ src, alt }: { src: string; alt?: string }) => {
 	return <img src={src} alt={alt} className='w-full rounded-md mb-4' />;
-}
+};
 
 export const ModalContent: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({
 	children,
