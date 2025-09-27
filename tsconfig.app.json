@@ -15,6 +15,7 @@
 		"moduleDetection": "force",
 		"noEmit": true,
 		"declaration": true,
+		"declarationMap": true,
 		"declarationDir": "types",
 		"jsx": "react-jsx",
 

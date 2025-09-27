@@ -4,7 +4,7 @@ import { cn } from '../../lib/utils';
 import { ButtonProps } from '../../types';
 
 // Button component with TypeScript
-const Button: React.FC<ButtonProps> = ({
+export const Button: React.FC<ButtonProps> = ({
 	children,
 	variant = 'primary',
 	size = 'default',
@@ -80,4 +80,3 @@ const Button: React.FC<ButtonProps> = ({
 		</button>
 	);
 };
-export default Button;

@@ -22,11 +22,13 @@ export default [
 				file: packageJson.main, // CJS: dist/index.js
 				format: 'cjs',
 				sourcemap: true,
+				exports:'named'
 			},
 			{
 				file: packageJson.module, // ESM: dist/index.esm.js
 				format: 'esm',
 				sourcemap: true,
+				exports: 'named',
 			},
 		],
 		plugins: [
