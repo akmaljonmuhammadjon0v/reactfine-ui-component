@@ -1,6 +1,6 @@
 import '../index.css';
-export { Badge } from './badge';
-export { Button } from './button';
-export { Card } from './card';
-export { Input } from './input';
-export { Modal } from './modal';
+export * from './input'; // input/index.ts
+export * from './button'; // button/index.ts
+export * from './badge'; // badge/index.ts
+export * from './modal'; // modal/index.ts
+export * from './card'; // card/index.ts
