@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { MailIcon, RocketIcon, Sun } from 'lucide-react';
 import { Badge, Card, Input, Modal } from './components';
 
@@ -9,7 +10,6 @@ import {
 	CardTitle,
 } from './components/card/card';
 
-import { useState } from 'react';
 import {
 	ModalContent,
 	ModalDescription,
