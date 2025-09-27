@@ -58,10 +58,8 @@ export const Button: React.FC<ButtonProps> = ({
 
 	const buttonClasses = cn(
 		baseClasses,
-		// faqat bg yo‘q bo‘lsa default variant qo‘shiladi
-		className?.includes('bg-') && variantClasses[variant],
-		// faqat rounded yo‘q bo‘lsa default qo‘shiladi
-		className?.includes('rounded') && roundedClasses[rounded],
+		variantClasses[variant],
+		roundedClasses[rounded],
 		sizeClasses[size],
 		focusClasses[focus || variant],
 		loading && 'opacity-70 pointer-events-none',
