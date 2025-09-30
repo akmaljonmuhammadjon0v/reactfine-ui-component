@@ -44,7 +44,7 @@ export const Card: React.FC<CardProps> = ({
 	return (
 		<div
 			className={cn(
-				'bg-white transition-shadow duration-200 p-5', // ← Faqat max-w-md qo'shildi
+				'bg-white transition-shadow duration-200 p-4', // ← Faqat max-w-md qo'shildi
 				shadowMap[shadow],
 				border && 'border border-gray-200',
 				hoverable && 'hover:shadow-lg cursor-pointer',
