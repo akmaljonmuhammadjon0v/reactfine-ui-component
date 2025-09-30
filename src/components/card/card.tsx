@@ -44,7 +44,7 @@ export const Card: React.FC<CardProps> = ({
 	return (
 		<div
 			className={cn(
-				'bg-white transition-shadow duration-200 p-4', // ← Faqat max-w-md qo'shildi
+				'bg-white transition-shadow duration-200 p-1', // ← Faqat max-w-md qo'shildi
 				shadowMap[shadow],
 				border && 'border border-gray-200',
 				hoverable && 'hover:shadow-lg cursor-pointer',
@@ -133,7 +133,11 @@ export const CardFooter: React.FC<CardFooterProps> = ({
 	};
 	return (
 		<div
-			className={cn('px-4 py-3 pb-5', alignmentClasses[align], className)}
+			className={cn(
+				'px-4 py-3 pb-5 border-t border-gray-100',
+				alignmentClasses[align],
+				className
+			)}
 			{...restProps}
 		>
 			{children}
