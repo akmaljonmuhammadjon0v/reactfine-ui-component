@@ -2,21 +2,21 @@ import React from 'react';
 import { cn } from '../../lib/utils';
 
 interface BadgeProps extends React.HTMLAttributes<HTMLSpanElement> {
-	variant?: 'default' | 'success' | 'warning' | 'danger' | 'outline' | 'dark';
-	size?: 'default';
+	variant?: 'primary' | 'success' | 'warning' | 'danger' | 'outline' | 'dark';
+	size?: 'sm' | 'md' | 'lg';
 	rounded?: 'sm' | 'md' | 'lg' | 'full';
 }
 
 export const Badge: React.FC<BadgeProps> = ({
 	children,
-	variant = 'default',
-	size = 'default',
+	variant = 'primary',
+	size = 'md',
 	rounded = 'md',
 	className,
 	...props
 }) => {
 	const variantClasses = {
-		default: 'bg-blue-500 text-white',
+		primary: 'bg-blue-500 text-white',
 		success: 'bg-green-600 text-white',
 		warning: 'bg-yellow-400 text-black',
 		danger: 'bg-red-500 text-white',
@@ -25,7 +25,9 @@ export const Badge: React.FC<BadgeProps> = ({
 	};
 
 	const sizeClasses = {
-		default: 'text-[13px] px-3 py-0.5',
+		sm: 'text-[10px] px-2 py-0.5',
+		md: 'text-[12px] px-2.5 py-0.5',
+		lg: 'text-[14px] px-3 py-1',
 	};
 
 	const roundedClasses = {
@@ -38,7 +40,7 @@ export const Badge: React.FC<BadgeProps> = ({
 	return (
 		<span
 			className={cn(
-				'inline-flex items-center font-semibold',
+				'inline-block items-center font-semibold',
 				variantClasses[variant],
 				sizeClasses[size],
 				roundedClasses[rounded],

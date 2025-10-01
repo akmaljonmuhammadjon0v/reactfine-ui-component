@@ -36,7 +36,7 @@ function App() {
 				</Button>
 			</div>
 			<div>
-				<Badge rounded='sm' variant='default'>
+				<Badge rounded='sm' variant='primary'>
 					Primary
 				</Badge>
 				<Badge rounded='md' variant='outline'>
@@ -52,6 +52,7 @@ function App() {
 					Warning
 				</Badge>
 				<Badge variant='danger'>Danger</Badge>
+				<Button>Salom</Button>
 			</div>
 			<div>
 				<Card shadow='md' width='xl' hoverable rounded='lg'>
