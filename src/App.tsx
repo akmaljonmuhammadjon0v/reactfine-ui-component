@@ -55,6 +55,17 @@ function App() {
 				<Button>Salom</Button>
 			</div>
 			<div>
+				<Badge rounded='lg' size='sm' variant='success'>
+					Success
+				</Badge>
+				<Badge rounded='full' size='md' variant='warning'>
+					Warning
+				</Badge>
+				<Badge variant='danger' size='lg'>
+					Danger
+				</Badge>
+			</div>
+			<div>
 				<Card shadow='md' width='xl' hoverable rounded='lg'>
 					<CardHeader>
 						<CardTitle>Card Title</CardTitle>
