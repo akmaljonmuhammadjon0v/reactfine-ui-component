@@ -7,7 +7,7 @@ import { ButtonProps } from '../../types';
 export const Button: React.FC<ButtonProps> = ({
 	children,
 	variant = 'primary',
-	size = 'default',
+	size = 'md',
 	loading = false,
 	focus,
 	className,
@@ -26,9 +26,9 @@ export const Button: React.FC<ButtonProps> = ({
 	};
 
 	const sizeClasses = {
-		small: 'h-9 px-4 text-sm',
-		default: 'h-10 px-5 text-base',
-		large: 'h-12 px-7 text-lg',
+		sm: 'h-9 px-4 text-sm',
+		md: 'h-10 px-5 text-base',
+		lg: 'h-12 px-7 text-lg',
 		icon: 'h-10 w-10 p-0',
 	};
 

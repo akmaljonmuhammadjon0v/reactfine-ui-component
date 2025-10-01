@@ -9,7 +9,7 @@ export interface ButtonProps
 		| 'success'
 		| 'outline'
 		| 'dark';
-	size?: 'small' | 'default' | 'large' | 'icon';
+	size?: 'sm' | 'md' | 'lg' | 'icon';
 	focus?:
 		| 'primary'
 		| 'secondary'
