@@ -54,7 +54,7 @@ function App() {
 				<Badge variant='danger'>Danger</Badge>
 			</div>
 			<div>
-				<Card shadow='md' width='sm' hoverable rounded='lg'>
+				<Card shadow='md' width='xl' hoverable rounded='lg'>
 					<CardHeader>
 						<CardTitle>Card Title</CardTitle>
 						<CardDescription>Bio</CardDescription>
