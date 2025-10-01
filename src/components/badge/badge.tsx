@@ -17,6 +17,7 @@ export const Badge: React.FC<BadgeProps> = ({
 }) => {
 	const variantClasses = {
 		primary: 'bg-blue-500 text-white',
+		secondary: 'bg-gray-400 text-white',
 		success: 'bg-green-600 text-white',
 		warning: 'bg-yellow-400 text-black',
 		danger: 'bg-red-500 text-white',
@@ -25,8 +26,8 @@ export const Badge: React.FC<BadgeProps> = ({
 	};
 
 	const sizeClasses = {
-		sm: 'text-[10px] px-2 py-0.5',
-		md: 'text-[12px] px-2.5 py-0.5',
+		sm: 'text-[11px] px-2.5 py-0.5',
+		md: 'text-[13px] px-3 py-0.5',
 		lg: 'text-[14px] px-3 py-1',
 	};
 
