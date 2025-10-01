@@ -46,6 +46,8 @@ export const Button: React.FC<ButtonProps> = ({
 			'focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400',
 		danger:
 			'focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500',
+		warning:
+			'focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500',
 		success:
 			'focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500',
 		outline:
