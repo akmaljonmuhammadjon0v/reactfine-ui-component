@@ -18,6 +18,6 @@ export interface ButtonProps
 		| 'success'
 		| 'outline'
 		| 'dark';
-	rounded?: 'sm' | 'default' | 'lg' | 'full';
+	rounded?: 'sm' | 'md' | 'lg' | 'full';
 	loading?: boolean;
 }

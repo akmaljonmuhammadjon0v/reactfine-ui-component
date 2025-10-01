@@ -12,7 +12,7 @@ export const Button: React.FC<ButtonProps> = ({
 	focus,
 	className,
 	disabled,
-	rounded = 'default',
+	rounded = 'md',
 	...restProps
 }: ButtonProps) => {
 	const variantClasses = {
@@ -34,7 +34,7 @@ export const Button: React.FC<ButtonProps> = ({
 
 	const roundedClasses = {
 		sm: 'rounded-sm',
-		default: 'rounded-md',
+		md: 'rounded-md',
 		lg: 'rounded-lg',
 		full: 'rounded-full',
 	};
