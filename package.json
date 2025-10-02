@@ -11,7 +11,7 @@
 		"LICENSE"
 	],
 	"private": false,
-	"version": "1.0.48",
+	"version": "1.0.49",
 	"type": "module",
 	"scripts": {
 		"start": "vite",
