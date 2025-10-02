@@ -55,7 +55,7 @@ function App() {
 				<Button>Salom</Button>
 			</div>
 			<div>
-				<Badge rounded='lg' size='sm' variant='success'>
+				<Badge rounded='lg' variant='success'>
 					Success
 				</Badge>
 				<Badge rounded='full' size='md' variant='warning'>

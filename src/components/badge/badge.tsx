@@ -10,7 +10,7 @@ interface BadgeProps extends React.HTMLAttributes<HTMLSpanElement> {
 		| 'danger'
 		| 'outline'
 		| 'dark';
-	size?: 'sm' | 'md' | 'lg';
+	size?: 'md' | 'lg';
 	rounded?: 'sm' | 'md' | 'lg' | 'full';
 }
 
@@ -33,8 +33,7 @@ export const Badge: React.FC<BadgeProps> = ({
 	};
 
 	const sizeClasses = {
-		sm: '!text-xs px-2.5 py-0.5 leading-none',
-		md: 'text-[13px] px-3 py-1 leading-none',
+		md: 'text-[13px] px-3 py-0.5 leading-none',
 		lg: 'text-[14px] px-4 py-1.5 leading-none',
 	};
 
