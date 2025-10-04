@@ -33,8 +33,8 @@ export const Badge: React.FC<BadgeProps> = ({
 	};
 
 	const sizeClasses = {
-		md: 'text-[13px] px-3 py-0.5 leading-none',
-		lg: 'text-[14px] px-4 py-1.5 leading-none',
+		md: 'text-[13px] px-3 py-0.5',
+		lg: 'text-[14px] px-4 py-1.5',
 	};
 
 	const roundedClasses = {

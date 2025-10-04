@@ -6,7 +6,7 @@ export interface InputProps
 	label?: string;
 	error?: string;
 	helperText?: string;
-	size?: 'small' | 'default' | 'large';
+	size?: 'sm' | 'md' | 'lg';
 	fullWidth?: boolean;
 	startIcon?: React.ReactNode;
 	endIcon?: React.ReactNode;
@@ -18,7 +18,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
 			label,
 			error,
 			helperText,
-			size = 'default',
+			size = 'md',
 			fullWidth = false,
 			startIcon,
 			endIcon,
@@ -29,23 +29,23 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
 		ref
 	) => {
 		const sizeClasses = {
-			small: 'text-sm py-1.5',
-			default: 'text-base py-2',
-			large: 'text-lg py-2.5',
+			sm: 'text-sm py-1.5',
+			md: 'text-base py-2',
+			lg: 'text-lg py-2.5',
 		};
 
 		const paddingX = 'px-3';
 
 		const iconPaddingLeft = {
-			small: 'pl-8',
-			default: 'pl-10',
-			large: 'pl-12',
+			sm: 'pl-8',
+			md: 'pl-10',
+			lg: 'pl-12',
 		};
 
 		const iconPaddingRight = {
-			small: 'pr-8',
-			default: 'pr-10',
-			large: 'pr-12',
+			sm: 'pr-8',
+			md: 'pr-10',
+			lg: 'pr-12',
 		};
 
 		const inputClass = cn(

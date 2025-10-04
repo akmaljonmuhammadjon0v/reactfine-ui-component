@@ -92,12 +92,13 @@ function App() {
 					helperText='Yaxshi formatda kiriting'
 					error=''
 					type='email'
-					size='default'
+					size='md'
 					startIcon={<MailIcon className='w-4 h-4' />}
 				/>
 			</div>
 			<div>
 				<Button onClick={() => setOpen(true)}>Modal</Button>
+
 				<Modal isOpen={open} onClose={() => setOpen(false)}>
 					<ModalTitle>Modal Title</ModalTitle>
 					<ModalContent>

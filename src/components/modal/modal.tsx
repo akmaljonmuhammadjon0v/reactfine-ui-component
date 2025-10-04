@@ -29,10 +29,9 @@ export const Modal: React.FC<ModalProps> = ({
 				)}
 				onClick={e => e.stopPropagation()} // modal ichiga bosganda yopilmasligi uchun
 			>
-				{/* Close button */}
-
 				{/* Content */}
 				{children}
+				{/* Close button */}
 				<button
 					onClick={onClose}
 					className='absolute cursor-pointer top-2 right-2 text-zinc-500 hover:text-zinc-800'
